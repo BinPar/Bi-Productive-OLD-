@@ -1,0 +1,3 @@
+Template.updates.rendered = function() {
+
+};
