@@ -149,7 +149,7 @@ right: auto;
     margin-top: 5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
     ul.timeline:before {
         left: 40px;
     }
@@ -183,4 +183,8 @@ right: auto;
             left: -14px;
             right: auto;
         }
+}
+
+.avoid-padding.avoid-padding {
+    padding: 0px;
 }
