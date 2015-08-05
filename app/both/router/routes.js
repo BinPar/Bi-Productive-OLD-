@@ -1,5 +1,6 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  controller: 'HomeController'
 });
 
 Router.route('/dashboard', {

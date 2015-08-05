@@ -3,13 +3,5 @@ Meteor.publishComposite("items", function() {
     find: function() {
       return Items.find({});
     }
-    // ,
-    // children: [
-    //   {
-    //     find: function(item) {
-    //       return [];
-    //     }
-    //   }
-    // ]
   }
 });

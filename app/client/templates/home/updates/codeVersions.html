@@ -1,0 +1,40 @@
+<template name="codeVersions">
+	<ul class="timeline">
+      {{#each codeVersions}}
+      <li class="{{cssClass}}">
+        <div class="timeline-badge {{Type}}"><i class="glyphicon glyphicon glyphicon-{{Icon}}"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h3 class="timeline-title"><srtong>v{{ Version }}</srtong> {{ Title }}</h3>
+            <p>
+              <small class="text-muted"><i class="glyphicon glyphicon-calendar"></i> {{formatDate Creation}}</small>
+              {{#each Users}}
+              <small class="text-muted"> por <i class="glyphicon glyphicon-user"></i> {{Name}}</small>
+              {{/each}}
+            </p>
+          </div>
+          <div class="timeline-body">
+            {{{Description}}}
+            {{#if Details}}
+            <br />
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" href="#detallesVersion{{_id}}">
+                    Ver detalles de la versión
+                  </a>
+                </h4>
+              </div>
+              <div id="detallesVersion{{_id}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                  {{{Details}}}
+                </div>
+              </div>      
+            </div>            
+            {{/if}}
+          </div>
+        </div>
+      </li>
+      {{/each}}
+  </ul>
+</template>

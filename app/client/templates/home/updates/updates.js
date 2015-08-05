@@ -1,3 +1,0 @@
-Template.updates.rendered = function() {
-
-};
