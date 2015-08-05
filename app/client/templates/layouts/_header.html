@@ -21,19 +21,19 @@
                 <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
               </a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#" data-action="logout"><i class="fa fa-lock"></i> Sign Out</a></li>
+                <li><a href="#" data-action="logout"><i class="fa fa-lock"></i> Cerra Sesión</a></li>
               </ul>
             </li>
           </ul>
         {{else}}
           <div class="navbar-right">
-            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
-            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+            <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Conectar</a>
+            <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Registrarse</a>
           </div>
         {{/if}}
 
         <ul class="nav navbar-nav navbar-right">
-          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i> Home</a></li>
+          <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i> Inicio</a></li>
           <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="fa fa-gear"></i> Dashboard</a></li>
         </ul>
       </div>

@@ -28,6 +28,7 @@ Meteor.startup(function() {
                   '<p>Añadida la funcionalidad de crear un usuario por defecto.</p>' +
                   '<p>Añadido el sistema interno de perfiles.</p>' +
                   '<p>Por el momento me parece más claro el sistema estándar de <a href="http://www.meteor.com/">Meteor</a>  que el <a href="http://github.differential.com/meteor-boilerplate/">Boilerplate</a> de <a href="http://differential.com/">Diferencial</a>.</p>' +
+                  '<p>Se añade la licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional License</a>.</p>'+
                   '<p>Temas pendientes:</p>' + 
                   '<ul><li>Encontrar el modo de publicar una <strong>collection</strong> en un <strong>template</strong> sin tocar el <strong>controller</strong>.</li></ul>'
 

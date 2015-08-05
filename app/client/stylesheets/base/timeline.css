@@ -94,6 +94,9 @@ border-bottom-right-radius: 50%;
 border-bottom-left-radius: 50%;
 }
 
+.timeline > li.timeline > .timeline-badge {
+top: 35px;
+}
 .timeline > li.timeline-inverted > .timeline-panel {
 float: right;
 }
