@@ -14,7 +14,8 @@ Meteor.startup(function() {
       ],
       Description:'<p>Se incorpora la funcionalidad de gestión de usaurios y roles.</p>',
       Details:    '<p>Tras la versión <strong>0.11</strong> identifico muchos problemas de base con el desarrollo en <a href="http://www.meteor.com">Meteor</a>, realizo el tutorial de <a href="http://es.discovermeteor.com/">discovermeteor.com</a> y re-estudio la <a href="http://docs.meteor.com/#/full/">documentación</a> para mejorar mi dominio de la plataforma.</p>' +
-                  '<p>El <a href="http://github.differential.com/meteor-boilerplate/">Boilerplate</a> de <a href="http://differential.com/">Diferencial</a> ha acelerado el proceso, pero tengo la sensación de no controlar los entresijos de como esta funcionando (como si llegase a un proyecto ya construido sin conocerlo).</p>'
+                  '<p>El <a href="http://github.differential.com/meteor-boilerplate/">Boilerplate</a> de <a href="http://differential.com/">Diferencial</a> ha acelerado el proceso, pero tengo la sensación de no controlar los entresijos de como esta funcionando (como si llegase a un proyecto ya construido sin conocerlo).</p>'+
+                  '<p>Se añade también la explicación sobre <a href="#tecnologiasReactivas">tecnologías reactivas</a> así como el ejemplo páctico basado en <strong>los logros más valorados</strong>.</p>'
     });
   }
 

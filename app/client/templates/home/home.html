@@ -17,7 +17,7 @@
   <div class="page-header">
     <h2>Las necesidades de un sistema de gestión de producción</h2>
   </div>
-  <div class="container-fluid avoid-padding">
+  <div class="row">
     <div class="col-md-6">
       <p>Durante años hemos venido probando infinidad de sistemas para la gestión de nuestro nuestra producción buscando los siguientes objetivos:</p>
       <ul>
@@ -36,11 +36,42 @@
       </p>
     </div>
   </div>
-  
+  <div class="page-header" id="tecnologiasReactivas">
+    <h2>Pioneros en el uso tecnologías reactivas</h2>
+  </div>
+  <div>    
+    <p>Si realizamos un cambio en una carpeta del disco duro y tenemos otro explorador de ficheros abiertos, esperamos (de forma natural) que el fichero aparezca en ambos sin tener que actualizarlos.</p>
+    <p>Sin embargo nos hemos acostumbrado a que este tipo de actualizaciones  a tiempo real no se produzcan y que, si algo ha cambiado en un sitio web, tengamos que actualizarlo para ver la nueva versión.</p>
+    <p>En la tabla de <strong>los logros más valorados</strong> puedes ver cómo funciona. Si abres esta página en varios navegadores y añades o quitas valor a cada una de los logros verás que se replica entre las distintas instancias. Así sucederá con todos los usuarios.</p>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 pull-right" style="padding-right:0px;">
+      <ul class="list-group">
+        <li class="list-group-item active">
+          Los logros más valorados
+        </li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div> Realizado por BinPar<span class="badge">14</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Código abierto<span class="badge">2</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Diseño visual<span class="badge">14</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Reactivo<span class="badge">0</span></li>      
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Responsivo<span class="badge">0</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión HTML5<span class="badge">0</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión iOS<span class="badge">0</span></li>
+        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión Android<span class="badge">0</span></li>
+      </ul>
+    </div>
+    <p>La causa de este efecto es que las tecnologías que teníamos hasta ahora en el mundo del desarrollo web no permitían que el servidor que nos está proporcionando la información tomase la iniciativa a la hora de indicarnos que se ha producido un cambio en la misma.</p>
+    <p>Lo más parecido que podíamos hacer era disponer de un <strong>script</strong> en la página que preguntase constantemente al servidor si habia novedades con respecto al contenido.</p>
+    <p>Este enfoque de preguntar constantemente por novedades al servidor se conoce normalmente como <strong>pooling</strong> y dista mucho de ser óptimo por la cantidad de tráfico y transacciones que genera si se desea una buena latencia (tiempo transcurrido desde que se produce un cambio hasta que lo visualizamos).</p>
+    <p>El estándar HTML5 ha incorporado recientemente la opción de conectar una página con un servidor mediante un <a href="https://es.wikipedia.org/wiki/WebSocket">websocket</a>, haciendo posible por primera vez en la historia hacer desarrollos que muestren contenidos vivos, que se actualizan y evolucionan sin tener que refrescar el contenido de la página.</p>
+    <p>Por experiencias pasadas en el mundo de los videojuegos sabemos que para tener una experiencia de uso perfecta, es necesario implementar lo que se conoce como <a href="http://www.vis.uni-stuttgart.de/plain/seminare/computerspiele/latency.pdf">“latency-compensation”</a>: Un algoritmo que replica el conjunto de datos empleado por la aplicación situado en el servidor, realizando cualquier actualización en el mismo de manera local (lo cual requiere simular el comportamiento de la BBDDs en el navegador) e instantánea y sincronizándola mediante una conexión socket con el servidor para que la comunique al resto de clientes.</p>
+    <p>Esto implica replicar las funcionalidades del sistema de BBDDs (en nuestro caso MongoDB) en el navegador y crear un protocolo de comunicación preparado para flujos complejos.</p>
+    <p>Un ejemplo de uno de estos procesos sería la aplicación “local” de un cambio, el envío por sockets al servidor, el rechazo de dicho cambio por parte del servidor en el proceso de validación debido a una causa que no podía ser verificada por el cliente y su cancelación asíncrona (rollback) o propagación en caso de aceptación.</p>
+    <p>Dado el enorme trabajo que implica realizar una tarea así, hemos decidido sustentar el desarrollo sobre el sistema de <a href="https://meteorhacks.com/introduction-to-latency-compensation">Compensación de Latencia</a> del framework de <a href="http://www.meteor.com">Meteor</a>, haciendo uso de su protocolo <a href="https://www.meteor.com/ddp">DDP</a> (Distributed Data Protocol) para el sistema de propagación de modificaciones.</p>
+  </div>
   <div class="page-header">
     <h2>Una aplicación de código abierto</h2>
   </div>
-  <div class="container-fluid avoid-padding">
+  <div class="row">
     <div class="col-md-8">
       <p>
         Bi-Productive es el primer proyecto de BinPar basado al <strong>100%</strong> en código abierto.
@@ -65,8 +96,6 @@
   </div>
 	<div class="page-header">
 		<h2>Historial de cambios</h2>
-  </div>
-  <div class="container-fluid">
+  </div>  
 	{{> codeVersions}}
-  </div>
 </template>
