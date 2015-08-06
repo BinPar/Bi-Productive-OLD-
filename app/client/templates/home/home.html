@@ -6,7 +6,13 @@
 	  	El nuevo sistema de gestión de producción de
 	  	<a href="http://www.binpar.com">BinPar Team S.L.</a> basado en los nuevos estándares web de HTML5 (responsivo, reactivo y social).
 	  </p>
-	  <p class="text-right"><a class="btn btn-primary btn-lg " href="#" role="button">Más detalles</a></p>
+	  <p class="text-right">
+        {{#if currentUser}}          
+          <a class="btn btn-primary btn-lg " href="{{ pathFor 'dashboard' }}" role="button"><i class="fa fa-gear"></i> Dashboard</a>
+        {{else}}
+            <a class="btn btn-primary btn-lg " href="{{ pathFor 'atSignIn' }}" role="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Conectar</a>
+        {{/if}}    
+    </p>
 	</div>
   <div class="page-header">
     <h2>Las necesidades de un sistema de gestión de producción</h2>
@@ -29,7 +35,6 @@
       <p>Además, en <a href="http://www.binpar.com">BinPar</a> creemos en un modelo de mayor participación del cliente en el proceso de producción que requiere de herramientas específicas que aporten lo mejor de las nuevas redes sociales a nuestros servicios de desarrollo de proyectos, liberando todo el potencial disponible en HTML5 para la comunicación a tiempo real.
       </p>
     </div>
-    
   </div>
   
   <div class="page-header">
