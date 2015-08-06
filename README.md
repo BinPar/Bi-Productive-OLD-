@@ -17,8 +17,6 @@ Dado que casi todos nuestros procedimientos se basan en la metodología Scrum (a
 
 Bi-Productive es el primer proyecto de BinPar basado al 100% en código abierto.
 
-Es posible bajarse el código fuente y consultar su evolución desde el correnpondiente repositorio de Git-Hub.
-
 Bi-Productive por BinPar Team S.L. esta licenciado bajo licencia Creative Commons (reconocimiento, no comercial, compartir igual) 4.0 Internacional.
 
 Puedes emplear el código fuente, editarlo y modificarlo de la manera que quieras siempre que atribuyas nuestro trabajo con un link a BinPar.com, publiques los trabajos resultantes bajo el mismo tipo de licencia y no lo emplees para uso comercial.
