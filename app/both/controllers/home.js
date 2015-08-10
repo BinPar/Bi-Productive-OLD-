@@ -1,5 +1,5 @@
 HomeController = AppController.extend({
-  waitOn: function() {
+  waitOn: function() {        
     return this.subscribe('codeVersions');
   },
   data: {
@@ -11,6 +11,7 @@ HomeController = AppController.extend({
             cv.cssClass = (index % 2) == 0 ? "timeline-inverted":"timeline";
             return cv;
         });
+
       return versions;
 
     }
@@ -18,7 +19,7 @@ HomeController = AppController.extend({
 });
 
 HomeController.events({
-  'click [data-action=doSomething]': function (event, template) {
+  'click [data-action=doSomething]': function (event, template) {    
     event.preventDefault();
   }
 });

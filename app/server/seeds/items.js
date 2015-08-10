@@ -9,6 +9,5 @@ Meteor.startup(function() {
     _(10).times(function(n) {
       Factory.create('item');
     });
-
   }
 });
