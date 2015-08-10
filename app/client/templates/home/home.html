@@ -1,102 +1,96 @@
 <template name="home">
-  <div class="template-home">
+	<div class="template-home">
 		<div class="jumbotron">
-		<h1>Bienvenido a <strong class="text-nowrap">Bi-Productive</strong></h1>
-		<p>
-	  	El nuevo sistema de gestión de producción de
-	  	<a href="http://www.binpar.com">BinPar Team S.L.</a> basado en los nuevos estándares web de HTML5 (responsivo, reactivo y social).
-	  </p>
-	  <p class="text-right">
-        {{#if currentUser}}          
-          <a class="btn btn-primary btn-lg " href="{{ pathFor 'dashboard' }}" role="button"><i class="fa fa-gear"></i> Dashboard</a>
-        {{else}}
-            <a class="btn btn-primary btn-lg " href="{{ pathFor 'atSignIn' }}" role="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Conectar</a>
-        {{/if}}    
-    </p>
-	</div>
-  <div class="page-header">
-    <h2>Las necesidades de un sistema de gestión de producción</h2>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <p>Durante años hemos venido probando infinidad de sistemas para la gestión de nuestro nuestra producción buscando los siguientes objetivos:</p>
-      <ul>
-        <li>Dar a nuestros clientes la capacidad de realizar un seguimiento detallado y transparente de los proyectos involucrándolos en el proceso de producción</li>
-        <li>Guiar la comunicación interna (organizando y simplificando la asignación de tareas y su seguimiento)</li>
-        <li>Suministrar los indicadores (KPIs) de rendimiento (por proyecto, cliente, empleado, etc.) que permitan asistir a la dirección en la toma de decisiones</li>
-        <li>Automatizar las tareas de gestión internas de la compañía</li>
-      </ul>
-      <p>Dado que casi todos nuestros procedimientos se basan en la metodología <a href="https://es.wikipedia.org/wiki/Scrum">Scrum</a>  
-        (ampliamente adoptada y valorada por su eficacia) nunca fue complejo identificar buenas herramientas para la gestión del ciclo de vida del software basadas en Iteraciones e <a href="https://es.wikipedia.org/wiki/Historias_de_usuario">Historias de usuario</a>. Sin embargo, a la hora de conciliar estos procedimientos con buenas herramientas de reporte de dedicación y gestión de recursos ninguna cumple con nuestras necesidades.
-      </p>
-    </div>
-	  <img src="/images/scrum.png" alt="Conceptos básicos de la metodología Scrum" class="col-md-6 col-sm-12 col-xs-12 fixScrumHeight" />
-    <div class="col-md-6">
-      <p>Además, en <a href="http://www.binpar.com">BinPar</a> creemos en un modelo de mayor participación del cliente en el proceso de producción que requiere de herramientas específicas que aporten lo mejor de las nuevas redes sociales a nuestros servicios de desarrollo de proyectos, liberando todo el potencial disponible en HTML5 para la comunicación a tiempo real.
-      </p>
-    </div>
-  </div>
-  <div class="page-header" id="tecnologiasReactivas">
-    <h2>Pioneros en el uso tecnologías reactivas</h2>
-  </div>
-  <div>    
-    <p>Si realizamos un cambio en una carpeta del disco duro y tenemos otro explorador de ficheros abiertos, esperamos (de forma natural) que el fichero aparezca en ambos sin tener que actualizarlos.</p>
-    <p>Sin embargo nos hemos acostumbrado a que este tipo de actualizaciones  a tiempo real no se produzcan y que, si algo ha cambiado en un sitio web, tengamos que actualizarlo para ver la nueva versión.</p>
-    <p>En la tabla de <strong>los logros más valorados</strong> puedes ver cómo funciona. Si abres esta página en varios navegadores y añades o quitas valor a cada una de los logros verás que se replica entre las distintas instancias. Así sucederá con todos los usuarios.</p>
+			<h1>Bienvenido a <strong class="text-nowrap">Bi-Productive</strong></h1>
+			<p>
+				El nuevo sistema de gestión de producción de
+				<a href="http://www.binpar.com">BinPar Team S.L.</a> basado en los nuevos estándares web de HTML5 (responsivo, reactivo y social).
+			</p>
+			<p class="text-right">
+				{{#if currentUser}}
+					<a class="btn btn-primary btn-lg " href="{{ pathFor 'dashboard' }}" role="button"><i class="fa fa-gear"></i> Dashboard</a>
+				{{else}}
+					<a class="btn btn-primary btn-lg " href="{{ pathFor 'atSignIn' }}" role="button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Conectar</a>
+				{{/if}}
+			</p>
+		</div>
+		<div class="page-header">
+			<h2>Las necesidades de un sistema de gestión de producción</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p>Durante años hemos venido probando infinidad de sistemas para la gestión de nuestro nuestra producción buscando los siguientes objetivos:</p>
+				<ul>
+					<li>Dar a nuestros clientes la capacidad de realizar un seguimiento detallado y transparente de los proyectos involucrándolos en el proceso de producción</li>
+					<li>Guiar la comunicación interna (organizando y simplificando la asignación de tareas y su seguimiento)</li>
+					<li>Suministrar los indicadores (KPIs) de rendimiento (por proyecto, cliente, empleado, etc.) que permitan asistir a la dirección en la toma de decisiones</li>
+					<li>Automatizar las tareas de gestión internas de la compañía</li>
+				</ul>
+				<p>Dado que casi todos nuestros procedimientos se basan en la metodología <a href="https://es.wikipedia.org/wiki/Scrum">Scrum</a>
+					(ampliamente adoptada y valorada por su eficacia) nunca fue complejo identificar buenas herramientas para la gestión del ciclo de vida del software basadas en Iteraciones e <a href="https://es.wikipedia.org/wiki/Historias_de_usuario">Historias de usuario</a>. Sin embargo, a la hora de conciliar estos procedimientos con buenas herramientas de reporte de dedicación y gestión de recursos ninguna cumple con nuestras necesidades.
+				</p>
+			</div>
+			<img src="/images/scrum.png" alt="Conceptos básicos de la metodología Scrum" class="col-md-6 col-sm-12 col-xs-12 fixScrumHeight" />
+			<div class="col-md-6">
+				<p>Además, en <a href="http://www.binpar.com">BinPar</a> creemos en un modelo de mayor participación del cliente en el proceso de producción que requiere de herramientas específicas que aporten lo mejor de las nuevas redes sociales a nuestros servicios de desarrollo de proyectos, liberando todo el potencial disponible en HTML5 para la comunicación a tiempo real.
+				</p>
+			</div>
+		</div>
+		<div class="page-header" id="tecnologiasReactivas">
+			<h2>Pioneros en el uso tecnologías reactivas</h2>
+		</div>
+		<div>
+			<p>Si realizamos un cambio en una carpeta del disco duro y tenemos otro explorador de ficheros abiertos, esperamos (de forma natural) que el fichero aparezca en ambos sin tener que actualizarlos.</p>
+			<p>Sin embargo nos hemos acostumbrado a que este tipo de actualizaciones  a tiempo real no se produzcan y que, si algo ha cambiado en un sitio web, tengamos que actualizarlo para ver la nueva versión.</p>
+			<p>En la tabla de <strong>los logros más valorados</strong> puedes ver cómo funciona. Si abres esta página en varios navegadores y añades o quitas valor a cada una de los logros verás que se replica entre las distintas instancias. Así sucederá con todos los usuarios.</p>
 
-    <div class="col-xs-12 col-sm-6 col-md-4 pull-right pull-right-padding-fix">
-      <ul class="list-group">
-        <li class="list-group-item active">
-          Los logros más valorados
-        </li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Realizado por BinPar<span class="badge">14</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Código abierto<span class="badge">2</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Uno nosequé que qué se yo<span class="badge">14</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Reactivo<span class="badge">0</span></li>      
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Responsivo<span class="badge">0</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión HTML5<span class="badge">0</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión iOS<span class="badge">0</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Versión Android<span class="badge">0</span></li>
-        <li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>Dámelo todo papi<span class="badge">0</span></li>
-      </ul>
-    </div>
-    <p>La causa de este efecto es que las tecnologías que teníamos hasta ahora en el mundo del desarrollo web no permitían que el servidor que nos está proporcionando la información tomase la iniciativa a la hora de indicarnos que se ha producido un cambio en la misma.</p>
-    <p>Lo más parecido que podíamos hacer era disponer de un <strong>script</strong> en la página que preguntase constantemente al servidor si habia novedades con respecto al contenido.</p>
-    <p>Este enfoque de preguntar constantemente por novedades al servidor se conoce normalmente como <strong>pooling</strong> y dista mucho de ser óptimo por la cantidad de tráfico y transacciones que genera si se desea una buena latencia (tiempo transcurrido desde que se produce un cambio hasta que lo visualizamos).</p>
-    <p>El estándar HTML5 ha incorporado recientemente la opción de conectar una página con un servidor mediante un <a href="https://es.wikipedia.org/wiki/WebSocket">websocket</a>, haciendo posible por primera vez en la historia hacer desarrollos que muestren contenidos vivos, que se actualizan y evolucionan sin tener que refrescar el contenido de la página.</p>
-    <p>Por experiencias pasadas en el mundo de los videojuegos sabemos que para tener una experiencia de uso perfecta, es necesario implementar lo que se conoce como <a href="http://www.vis.uni-stuttgart.de/plain/seminare/computerspiele/latency.pdf">“latency-compensation”</a>: Un algoritmo que replica el conjunto de datos empleado por la aplicación situado en el servidor, realizando cualquier actualización en el mismo de manera local (lo cual requiere simular el comportamiento de la BBDDs en el navegador) e instantánea y sincronizándola mediante una conexión socket con el servidor para que la comunique al resto de clientes.</p>
-    <p>Esto implica replicar las funcionalidades del sistema de BBDDs (en nuestro caso MongoDB) en el navegador y crear un protocolo de comunicación preparado para flujos complejos.</p>
-    <p>Un ejemplo de uno de estos procesos sería la aplicación “local” de un cambio, el envío por sockets al servidor, el rechazo de dicho cambio por parte del servidor en el proceso de validación debido a una causa que no podía ser verificada por el cliente y su cancelación asíncrona (rollback) o propagación en caso de aceptación.</p>
-    <p>Dado el enorme trabajo que implica realizar una tarea así, hemos decidido sustentar el desarrollo sobre el sistema de <a href="https://meteorhacks.com/introduction-to-latency-compensation">Compensación de Latencia</a> del framework de <a href="http://www.meteor.com">Meteor</a>, haciendo uso de su protocolo <a href="https://www.meteor.com/ddp">DDP</a> (Distributed Data Protocol) para el sistema de propagación de modificaciones.</p>
-  </div>
-  <div class="page-header">
-    <h2>Una aplicación de código abierto</h2>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-      <p>
-        Bi-Productive es el primer proyecto de BinPar basado al <strong>100%</strong> en código abierto.
-      </p>       
-      <p>Es posible bajarse el código fuente y consultar su evolución desde el correnpondiente repositorio de <a href="https://github.com/drnachio/Bi-Productive">Git-Hub</a>.</p>
-      <p><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Bi-Productive</span> por <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.binpar.com" property="cc:attributionName" rel="cc:attributionURL">BinPar Team S.L.</a> esta licenciado bajo licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons (reconocimiento, no comercial, compartir igual) 4.0 Internacional</a>.
-      </p>
-      <p>Puedes emplear el código fuente, editarlo y modificarlo de la manera que quieras siempre que atribuyas nuestro trabajo con un link a <a href="http://www.binpar.com">BinPar.com</a>, publiques los trabajos resultantes bajo el mismo tipo de licencia y no lo emplees para uso comercial.</p>
-    </div>
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">Información sobre el repositorio de GitGub</div>
-          <div class="panel-body">
-            <iframe src="https://ghbtns.com/github-btn.html?user=drnachio&repo=Bi-Productive&type=star&count=true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
-            <iframe src="https://ghbtns.com/github-btn.html?user=drnachio&repo=Bi-Productive&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
-            <iframe src="https://ghbtns.com/github-btn.html?user=drnachio&type=follow&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>            
-          </div>
-        </div>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-      </div>
-    </div>
-  </div>
+			<div class="col-xs-12 col-sm-6 col-md-4 pull-right pull-right-padding-fix">
+				<ul class="list-group">
+					<li class="list-group-item active">
+						Los logros más valorados
+					</li>
+					{{#each listaDemo}}
+						<li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos btnMas"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos btnMenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>{{ Nombre }}<span class="badge">{{ Votos }}</span></li>
+					{{/each}}
+				</ul>
+			</div>
+			<p>La causa de este efecto es que las tecnologías que teníamos hasta ahora en el mundo del desarrollo web no permitían que el servidor que nos está proporcionando la información tomase la iniciativa a la hora de indicarnos que se ha producido un cambio en la misma.</p>
+			<p>Lo más parecido que podíamos hacer era disponer de un <strong>script</strong> en la página que preguntase constantemente al servidor si habia novedades con respecto al contenido.</p>
+			<p>Este enfoque de preguntar constantemente por novedades al servidor se conoce normalmente como <strong>pooling</strong> y dista mucho de ser óptimo por la cantidad de tráfico y transacciones que genera si se desea una buena latencia (tiempo transcurrido desde que se produce un cambio hasta que lo visualizamos).</p>
+			<p>El estándar HTML5 ha incorporado recientemente la opción de conectar una página con un servidor mediante un <a href="https://es.wikipedia.org/wiki/WebSocket">websocket</a>, haciendo posible por primera vez en la historia hacer desarrollos que muestren contenidos vivos, que se actualizan y evolucionan sin tener que refrescar el contenido de la página.</p>
+			<p>Por experiencias pasadas en el mundo de los videojuegos sabemos que para tener una experiencia de uso perfecta, es necesario implementar lo que se conoce como <a href="http://www.vis.uni-stuttgart.de/plain/seminare/computerspiele/latency.pdf">“latency-compensation”</a>: Un algoritmo que replica el conjunto de datos empleado por la aplicación situado en el servidor, realizando cualquier actualización en el mismo de manera local (lo cual requiere simular el comportamiento de la BBDDs en el navegador) e instantánea y sincronizándola mediante una conexión socket con el servidor para que la comunique al resto de clientes.</p>
+			<p>Esto implica replicar las funcionalidades del sistema de BBDDs (en nuestro caso MongoDB) en el navegador y crear un protocolo de comunicación preparado para flujos complejos.</p>
+			<p>Un ejemplo de uno de estos procesos sería la aplicación “local” de un cambio, el envío por sockets al servidor, el rechazo de dicho cambio por parte del servidor en el proceso de validación debido a una causa que no podía ser verificada por el cliente y su cancelación asíncrona (rollback) o propagación en caso de aceptación.</p>
+			<p>Dado el enorme trabajo que implica realizar una tarea así, hemos decidido sustentar el desarrollo sobre el sistema de <a href="https://meteorhacks.com/introduction-to-latency-compensation">Compensación de Latencia</a> del framework de <a href="http://www.meteor.com">Meteor</a>, haciendo uso de su protocolo <a href="https://www.meteor.com/ddp">DDP</a> (Distributed Data Protocol) para el sistema de propagación de modificaciones.</p>
+		</div>
+		<div class="page-header">
+			<h2>Una aplicación de código abierto</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<p>
+					Bi-Productive es el primer proyecto de BinPar basado al <strong>100%</strong> en código abierto.
+				</p>
+				<p>Es posible bajarse el código fuente y consultar su evolución desde el correnpondiente repositorio de <a href="https://github.com/drnachio/Bi-Productive">Git-Hub</a>.</p>
+				<p><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Bi-Productive</span> por <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.binpar.com" property="cc:attributionName" rel="cc:attributionURL">BinPar Team S.L.</a> esta licenciado bajo licencia <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons (reconocimiento, no comercial, compartir igual) 4.0 Internacional</a>.
+				</p>
+				<p>Puedes emplear el código fuente, editarlo y modificarlo de la manera que quieras siempre que atribuyas nuestro trabajo con un link a <a href="http://www.binpar.com">BinPar.com</a>, publiques los trabajos resultantes bajo el mismo tipo de licencia y no lo emplees para uso comercial.</p>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">Información sobre el repositorio de GitGub</div>
+					<div class="panel-body">
+						<iframe src="https://ghbtns.com/github-btn.html?user=drnachio&repo=Bi-Productive&type=star&count=true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+						<iframe src="https://ghbtns.com/github-btn.html?user=drnachio&repo=Bi-Productive&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+						<iframe src="https://ghbtns.com/github-btn.html?user=drnachio&type=follow&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+					</div>
+				</div>
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+			</div>
+		</div>
+	</div>
 	<div class="page-header">
 		<h2>Historial de cambios</h2>
-  </div>  
+	</div>
 	{{> codeVersions}}
 </template>

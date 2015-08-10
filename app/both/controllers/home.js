@@ -1,5 +1,6 @@
 HomeController = AppController.extend({
-  waitOn: function() {        
+  waitOn: function() {
+    Meteor.subscribe('logrosDemo');
     return this.subscribe('codeVersions');
   },
   data: {
