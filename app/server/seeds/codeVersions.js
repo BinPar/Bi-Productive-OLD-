@@ -1,21 +1,43 @@
 Meteor.startup(function() {
 
 	CodeVersions.remove({Version: '0.12'});
+	CodeVersions.remove({Version: '0.13'});
+
+	if (CodeVersions.find({Version: '0.13'}).count() === 0) {
+		CodeVersions.insert({
+			Version: '0.13',
+			Type: 'info',
+			Icon: 'edit',
+			Title: 'Mantenimientos generales: Clientes',
+			Creation: new Date(2015, 8, 11, 12, 00, 0, 0),
+			Users: [
+				{Name:'DRNachio', Email:'nacho@binpar.com'}
+			],
+			Description:'<p>Se incorpora la funcionalidad necesaria para matenimientos generales.</p>',
+			Details:    '<p>Añadido módulo de DataTables <a href="https://atmospherejs.com/aldeed/tabular">aldeed:tabular</a>.</p>' +
+									'<p>Localización de datatables mediante el fichero de configuración <strong>lib/config/traduccionDataTables.js</strong>.</p>' +
+									'<p>Añadido módulo de AutoForm <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoform</a>.</p>' +
+									'<p>Añadido módulo de Moment <a href="https://atmospherejs.com/momentjs/moment">momentjs:moment</a>.</p>' +
+									'<p>Localizado el módulo de Moment mediante el fichero situado en <strong>lib/config/moment_es.js</string>.</p>'
+		});
+	}
+
 
 	if (CodeVersions.find({Version: '0.12'}).count() === 0) {
 		CodeVersions.insert({
 			Version: '0.12',
 			Type: 'info',
 			Icon: 'user',
-			Title: 'Gestión de usaurios',
+			Title: 'Registro de usuarios',
 			Creation: new Date(2015, 8, 9, 12, 00, 0, 0),
 			Users: [
 				{Name:'DRNachio', Email:'nacho@binpar.com'}
 			],
-			Description:'<p>Se incorpora la funcionalidad de gestión de usaurios y roles.</p>',
+			Description:'<p>Se incorpora la funcionalidad de usuarios y roles.</p>',
 			Details:    '<p>Tras la versión <strong>0.11</strong> identifico muchos problemas de base con el desarrollo en <a href="http://www.meteor.com">Meteor</a>, realizo el tutorial de <a href="http://es.discovermeteor.com/">discovermeteor.com</a> y re-estudio la <a href="http://docs.meteor.com/#/full/">documentación</a> para mejorar mi dominio de la plataforma.</p>' +
 									'<p>El <a href="http://github.differential.com/meteor-boilerplate/">Boilerplate</a> de <a href="http://differential.com/">Diferencial</a> ha acelerado el proceso, pero tengo la sensación de no controlar los entresijos de como esta funcionando (como si llegase a un proyecto ya construido sin conocerlo).</p>'+
 									'<p>Añadida demo reactiva y compensación de latencia.</p>' +
+									'<p>Localización del sistema de autenticación mediante <strong>both/accounts/config.js</strong>.</p>' +
 									'<p>Se añade también la explicación sobre <a href="#tecnologiasReactivas">tecnologías reactivas</a> así como el ejemplo páctico basado en <strong>los logros más valorados</strong>.</p>'
 		});
 	}

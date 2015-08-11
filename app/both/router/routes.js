@@ -3,6 +3,12 @@ Router.route('/', {
   controller: 'HomeController'
 });
 
+Router.route('/clientes', {
+  name: 'clientes',
+  controller: 'ClientesController'
+});
+
+
 Router.route('/dashboard', {
   name: 'dashboard',
   controller: 'DashboardController'
