@@ -4,7 +4,7 @@ El sistema de gestión de producción para empresas de desarrollo Software
 
 ## Demo
 
-Puedes acceder a una versión de demo en: bi-productive.meteor.com
+Puedes acceder a una versión de demo en: [bi-productive.meteor.com](http://bi-productive.meteor.com)
 
 Ten en cuenta que en la versión de demo no dispondrás de privilegios para grán parte de las funcionalidades.
 
