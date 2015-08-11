@@ -1,4 +1,7 @@
 ClientesController = AppController.extend({
+	waitOn: function() {
+
+	},
 	onAfterAction: function () {
 		Meta.setTitle('Clientes');
 	}
@@ -22,7 +25,7 @@ TabularTables.ListaClientes = new Tabular.Table({
 		 if (val instanceof Date) {
 		  return moment(val).calendar();
 		 } else {
-		  return "Never";
+		  return "Nunca";
 		 }
 		 }
 		 }/*,
