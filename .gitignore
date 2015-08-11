@@ -47,3 +47,17 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+.idea/workspace.xml
+
+.idea/.name
+
+.idea/Bi-Productive.iml
+
+.idea/jsLibraryMappings.xml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/vcs.xml

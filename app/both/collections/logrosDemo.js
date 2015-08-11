@@ -6,15 +6,10 @@ Meteor.methods({
 		if (Meteor.isServer) {
 			Meteor._sleepForMs(5000);
 		}*/
-		var elemento = LogrosDemo.findOne({_id: id});
-		if (elemento.Votos < 10) {
-			elemento.Votos++;
-			LogrosDemo.update (id, {$set: {Votos:elemento.Votos}}, function(error) {if (error) {alert(error.reason);}});
-		}
-
+		LogrosDemo.update({"_id": id,  "Votos": { $lt: 10 }} , {$inc: {Votos: 1}});
 	},
 	'LogrosDemo.decValor': function (id) {
-		LogrosDemo.update(id, {$inc: {Votos: -1}});
+		LogrosDemo.update({"_id": id,  "Votos": { $gt: 0 }} , {$inc: {Votos: -1}});
 	}
 });
 
