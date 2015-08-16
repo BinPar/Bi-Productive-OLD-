@@ -12,4 +12,3 @@ Meteor.methods({
 		LogrosDemo.update({"_id": id,  "Votos": { $gt: 0 }} , {$inc: {Votos: -1}});
 	}
 });
-

@@ -18,7 +18,8 @@ Meteor.startup(function() {
 									'<p>Localización de datatables mediante el fichero de configuración <strong>lib/config/traduccionDataTables.js</strong>.</p>' +
 									'<p>Añadido módulo de AutoForm <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoform</a>.</p>' +
 									'<p>Añadido módulo de Moment <a href="https://atmospherejs.com/momentjs/moment">momentjs:moment</a>.</p>' +
-									'<p>Localizado el módulo de Moment mediante el fichero situado en <strong>lib/config/moment_es.js</string>.</p>'
+									'<p>Localizado el módulo de Moment mediante el fichero situado en <strong>lib/config/moment_es.js</string>.</p>' +
+									'<p>Incorporado sistema de animación a la home en la lista de <strong>los logros más valorados<strong> al reordenar.'
 		});
 	}
 

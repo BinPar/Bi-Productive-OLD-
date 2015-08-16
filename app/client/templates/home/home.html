@@ -45,14 +45,14 @@
 			<p>En la tabla de <strong>los logros más valorados</strong> puedes ver cómo funciona. Si abres esta página en varios navegadores y añades o quitas valor a cada una de los logros verás que se replica entre las distintas instancias. Así sucederá con todos los usuarios.</p>
 
 			<div class="col-xs-12 col-sm-6 col-md-4 pull-right pull-right-padding-fix">
-				<ul class="list-group">
-					<li class="list-group-item active">
+				<div class="list-group" id="demoList">
+					<div class="list-group-item active">
 						Los logros más valorados
-					</li>
+					</div>
 					{{#each listaDemo}}
-						<li class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos btnMas"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos btnMenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>{{ Nombre }}<span class="badge">{{ Votos }}</span></li>
+						<div class="list-group-item"><div class="btn-group"><a href="#" class="btn btn-xs btn-masmenos btnMas"><i class="glyphicon glyphicon-thumbs-up"></i></a><a href="#" class="btn btn-xs btn-masmenos btnMenos"><i class="glyphicon glyphicon-thumbs-down"></i></a></div>{{ Nombre }}<span class="badge">{{ Votos }}</span></div>
 					{{/each}}
-				</ul>
+				</div>
 			</div>
 			<p>La causa de este efecto es que las tecnologías que teníamos hasta ahora en el mundo del desarrollo web no permitían que el servidor que nos está proporcionando la información tomase la iniciativa a la hora de indicarnos que se ha producido un cambio en la misma.</p>
 			<p>Lo más parecido que podíamos hacer era disponer de un <strong>script</strong> en la página que preguntase constantemente al servidor si habia novedades con respecto al contenido.</p>
