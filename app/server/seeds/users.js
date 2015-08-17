@@ -4,7 +4,7 @@ Meteor.startup(function() {
     var info = {
       username: 'DRNachio', 
       password: '1234', 
-      email: 'nacho@binpar.com',
+      email: 'drnacio@binpar.com',
       profile: {name: 'Ignacio Ferro Picón'}
     };
 

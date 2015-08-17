@@ -15,6 +15,9 @@ HomeController = AppController.extend({
       return versions;
 
     }
+  },
+  onAfterAction: function () {
+    Meta.setTitle('Bi-Productive');
   }
 });
 

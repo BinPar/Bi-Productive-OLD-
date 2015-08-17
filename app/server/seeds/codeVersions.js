@@ -11,15 +11,15 @@ Meteor.startup(function() {
 			Title: 'Mantenimientos generales: Clientes',
 			Creation: new Date(2015, 8, 11, 12, 00, 0, 0),
 			Users: [
-				{Name:'DRNachio', Email:'nacho@binpar.com'}
+				{Name: 'DRNachio', Email: 'nacho@binpar.com'}
 			],
-			Description:'<p>Se incorpora la funcionalidad necesaria para matenimientos generales.</p>',
-			Details:    '<p>Añadido módulo de DataTables <a href="https://atmospherejs.com/aldeed/tabular">aldeed:tabular</a>.</p>' +
-									'<p>Localización de datatables mediante el fichero de configuración <strong>lib/config/traduccionDataTables.js</strong>.</p>' +
-									'<p>Añadido módulo de AutoForm <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoform</a>.</p>' +
-									'<p>Añadido módulo de Moment <a href="https://atmospherejs.com/momentjs/moment">momentjs:moment</a>.</p>' +
-									'<p>Localizado el módulo de Moment mediante el fichero situado en <strong>lib/config/moment_es.js</string>.</p>' +
-									'<p>Incorporado sistema de animación a la home en la lista de <strong>los logros más valorados<strong> al reordenar.'
+			Description: '<p>Se incorpora la funcionalidad necesaria para matenimientos generales.</p>',
+			Details: '<p>Añadido módulo de DataTables <a href="https://atmospherejs.com/aldeed/tabular">aldeed:tabular</a>.</p>' +
+			'<p>Localización de datatables mediante el fichero de configuración <strong>lib/config/traduccionDataTables.js</strong>.</p>' +
+			'<p>Añadido módulo de AutoForm <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoform</a>.</p>' +
+			'<p>Añadido módulo de Moment <a href="https://atmospherejs.com/momentjs/moment">momentjs:moment</a>.</p>' +
+			'<p>Localizado el módulo de Moment mediante el fichero situado en <strong>lib/config/moment_es.js</strong>.</p>' +
+			'<p>Incorporado sistema de animación a la home en la lista de <strong>los logros más valorados<strong> al reordenar.'
 		});
 	}
 

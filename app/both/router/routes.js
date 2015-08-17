@@ -8,6 +8,10 @@ Router.route('/clientes', {
   controller: 'ClientesController'
 });
 
+Router.route('/books', {
+  name: 'books',
+  controller: 'BooksController'
+});
 
 Router.route('/dashboard', {
   name: 'dashboard',
