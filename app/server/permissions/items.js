@@ -1,11 +1,11 @@
 Items.allow({
   'insert': function(userId, doc) {
-    return userId;
+    return Roles.userIsInRole(userId, ['superadmin']);
   },
   'update': function(userId, doc, fields, modifier) {
-    return userId;
+    return Roles.userIsInRole(userId, ['superadmin']);
   },
   'remove': function(userId, doc) {
-    return userId;
+    return Roles.userIsInRole(userId, ['superadmin']);
   }
 });

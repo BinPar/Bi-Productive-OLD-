@@ -1,9 +1,18 @@
 <template name="books">
-    <div class="template-dashboard">
-        <div class="page-header">
-            <h1>Books</h1>
-        </div>
-        {{> quickForm collection="Books" id="insertBookForm" type="insert"}}
+	<div class="template-dashboard">
+		<div class="page-header">
+			<h1>Listado de libros</h1>
+		</div>
 
-    </div>
+		{{> tabular table=TabularTables.ListaLibros autoWidth="false" class="table table-striped table-responsive table-condensed binpar-resizeable"}}
+
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Añadir libro</h4>
+		</div>
+		<div class="panel-body">
+			{{> quickForm collection="Books" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9" id="insertBookForm" type="insert" buttonContent="Añadir" }}
+		</div>
+	</div>
 </template>

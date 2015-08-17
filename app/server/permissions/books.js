@@ -1,0 +1,1 @@
+Books.permit(['insert', 'update', 'remove']).ifHasRole('superadmin').apply();

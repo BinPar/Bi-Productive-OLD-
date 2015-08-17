@@ -9,3 +9,15 @@ BooksController = AppController.extend({
         Meta.setTitle('Books');
     }
 });
+
+Meteor.isClient && Template.registerHelper('TabularTables', TabularTables);
+TabularTables.ListaLibros = new Tabular.Table({
+    name: "ListaLibros",
+    collection: Books,
+    columns: [
+        {data: "title", title: "Título"},
+        {data: "author", title: "Autor"},
+        {data: "copies", title: "Copias"}
+    ],
+    language: TraduccionDataTables
+});

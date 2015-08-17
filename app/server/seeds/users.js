@@ -10,6 +10,6 @@ Meteor.startup(function() {
 
     var id = Accounts.createUser(info);
 
-    Roles.addUsersToRoles(id, ['superadmin','administración','manager','producción'], 'binpar.com');    
+    Roles.addUsersToRoles(id, ['superadmin','administración','manager','producción']);
   }
 });

@@ -18,7 +18,7 @@ footer
   padding-top:10px;
   position: relative;
   clear:both;
-  margin-top: -40px;
+  margin-top: -42px;
 }
 
 html,body  {
@@ -100,4 +100,121 @@ li {
 .topMost{
   z-index:10;
   //background-color: darken(@list-group-bg,5%);
+}
+
+.form-group.has-error, .form-group.has-error .help-block, .form-group.has-error .control-label, .form-group.has-error .radio, .form-group.has-error .checkbox, .form-group.has-error .radio-inline, .form-group.has-error .checkbox-inline, .form-group.has-error.radio label, .form-group.has-error.checkbox label, .form-group.has-error.radio-inline label, .form-group.has-error.checkbox-inline label{
+  color: @brand-danger;
+}
+
+.dataTables_paginate .pagination > li > a, .dataTables_paginate .pagination > li > span
+{
+  padding: 4px 8px;
+}
+
+.reduceTop {
+  margin-top: -15px;
+}
+
+.table-striped.binpar-resizeable > tbody tr{
+  cursor: pointer;
+}
+
+.table-striped.binpar-resizeable > tbody tr:hover
+{
+  background-color: @brand-primary;
+}
+
+td ul li {
+  text-align: left;
+}
+
+table.nowrap tr td, table.nowrap tr th{
+  white-space: nowrap;
+  overflow: hidden;
+}
+table.nowrap{
+  table-layout:fixed;
+}
+
+
+// Typography
+th.dt-left,
+td.dt-left {
+  text-align: left;
+}
+
+th.dt-center,
+td.dt-center,
+td.dataTables_empty {
+  text-align: center;
+}
+
+th.dt-right,
+td.dt-right {
+  text-align: right;
+}
+
+th.dt-justify,
+td.dt-justify {
+  text-align: justify;
+}
+
+th.dt-nowrap,
+td.dt-nowrap {
+  white-space: nowrap;
+}
+
+thead,
+tfoot {
+  th.dt-head-left,
+  td.dt-head-left {
+    text-align: left;
+  }
+
+  th.dt-head-center,
+  td.dt-head-center{
+    text-align: center;
+  }
+
+  th.dt-head-right,
+  td.dt-head-right {
+    text-align: right;
+  }
+
+  th.dt-head-justify,
+  td.dt-head-justify {
+    text-align: justify;
+  }
+
+  th.dt-head-nowrap,
+  td.dt-head-nowrap {
+    white-space: nowrap;
+  }
+}
+
+tbody {
+  th.dt-body-left,
+  td.dt-body-left {
+    text-align: left;
+  }
+
+  th.dt-body-center,
+  td.dt-body-center {
+    text-align: center;
+  }
+
+  th.dt-body-right,
+  td.dt-body-right {
+    text-align: right;
+  }
+
+  th.dt-body-justify,
+  td.dt-body-justify {
+    text-align: justify;
+  }
+
+  th.dt-body-nowrap,
+  td.dt-body-nowrap {
+    white-space: nowrap;
+  }
 }
