@@ -5,3 +5,11 @@ Meteor.publishComposite("clientes", function() {
 		}
 	}
 });
+
+Meteor.publishComposite("cliente", function(id) {
+	return {
+		find: function() {
+			return Clientes.find({_id : id});
+		}
+	}
+});
