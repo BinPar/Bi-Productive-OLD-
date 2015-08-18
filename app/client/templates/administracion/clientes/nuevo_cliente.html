@@ -1,0 +1,10 @@
+<template name="clienteNuevo">
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>Dar de alta un nuevo cliente</h4>
+	</div>
+	<div class="panel-body condensed-form">
+		{{> quickForm collection="Clientes" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"  id="insertClienteForm" type="insert" buttonContent="Añadir" buttonClasses="btn btn-primary pull-right" omitFields="fechaModificacion,fechaCreacion"  }}
+	</div>
+</div>
+</template>

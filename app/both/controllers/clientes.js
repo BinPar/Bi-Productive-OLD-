@@ -13,14 +13,25 @@ TabularTables.ListaClientes = new Tabular.Table({
 	name: "ListaClientes",
 	collection: Clientes,
 	responsive: true,
-	lengthMenu: [[20, 50, 100, 500, 1000], [20, 50, 100, 500, 1000]],
+	lengthMenu: [[15, 50, 100, 500, 1000], [15, 50, 100, 500, 1000]],
 	columns: [
-		{data: "Alias", title: "Alias", sWidth: "200px"},
-		{data: "Nombre", title: "Razón Social", sWidth: "200px"},
+		{data: "nombre", title: "Nombre corto", sWidth: "200px"},
+		{data: "razonSocial", title: "Razón Social", sWidth: "200px"},
 		{data: "NIF", title: "NIF", width:"50px"},
 		{
-			data: "FechaCreacion",
-			title: "Fecha alta", width:"180px", className: "dt-right",
+			data: "fechaCreacion",
+			title: "Creado", width:"180px", className: "dt-right",
+			render: function (val, type, doc) {
+				if (val instanceof Date) {
+					return moment(val).calendar();
+				} else {
+					return "Nunca";
+				}
+			}
+		},
+		{
+			data: "fechaModificacion",
+			title: "Modificado", width:"180px", className: "dt-right",
 			render: function (val, type, doc) {
 				if (val instanceof Date) {
 					return moment(val).calendar();

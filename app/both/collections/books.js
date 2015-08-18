@@ -3,7 +3,7 @@ Books.attachSchema(new SimpleSchema({
 	title: {
 		type: String,
 		label: "Título",
-		max: 200
+		max: 20
 	},
 	author: {
 		type: String,

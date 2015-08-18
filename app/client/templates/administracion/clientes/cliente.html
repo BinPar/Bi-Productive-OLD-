@@ -1,5 +1,13 @@
-<template name="cliente">
-	<div class="page-header reduceTop">
-		<h2>Detalles del cliente</h2>
+<template name="clienteDetalles">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Detalles del cliente {{this.nombre}}</h4>
+		</div>
+		<div class="panel-body condensed-form">
+			{{> quickForm collection="Clientes" doc=this template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9" id="updateClienteFrom" type="update" buttonContent="Guardar" buttonClasses="btn btn-primary pull-right" omitFields="fechaModificacion, fechaCreacion" }}
+			<div class="moveUpDelete"><div class="col-sm-3"></div>
+				{{#quickRemoveButton collection="Clientes" _id=this._id beforeRemove=beforeRemove class="btn btn-primary btn-danger" }}Eliminar{{/quickRemoveButton}}
+			</div>
+		</div>
 	</div>
 </template>

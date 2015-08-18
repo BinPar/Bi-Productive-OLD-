@@ -1,6 +1,9 @@
 <template name="clientes">
 	<div class="page-header reduceTop">
-		<h2>Listado de clientes</h2>
+		<h2>
+			Listado de clientes
+			<a class="btn btn-primary pull-right" href="{{pathFor route='cliente.nuevo'}}" title="Dar de alta nuevo cliente">+ Añadir</a>
+		</h2>
 	</div>
 	{{> tabular id="tabla" table=TabularTables.ListaClientes class="table table-striped display nowrap table-condensed binpar-resizeable"}}
 </template>

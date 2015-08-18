@@ -8,10 +8,14 @@ Router.route('/clientes', {
   controller: 'ClientesController'
 });
 
-Router.route('/cliente/:_id', function () {
-  this.render('cliente');
-}, {
-  name: 'cliente.detalles'
+Router.route('/nuevoCliente',{
+  name: 'cliente.nuevo',
+  controller: 'NuevoClienteController'
+});
+
+Router.route('/cliente/:_id',{
+  name: 'cliente.detalles',
+  controller: 'ClienteController'
 });
 
 Router.route('/books', {
