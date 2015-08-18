@@ -1,4 +1,5 @@
 Meteor.startup(function() {
+
 	Factory.define('cliente', Clientes, {
 		razonSocial: function () {
 			return Fake.sentence(3);
@@ -36,8 +37,9 @@ Meteor.startup(function() {
 				facturacion: false, comercial: true, tecnico: false
 			}
 		]
-});
+	});
 
+	//Clientes.remove({});
 
 	if (Clientes.find({}).count() === 0)
 	{

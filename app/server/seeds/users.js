@@ -1,10 +1,10 @@
 Meteor.startup(function() {
   if(!Meteor.users.find().count()) {
-    
+
     var info = {
-      username: 'DRNachio', 
-      password: '1234', 
-      email: 'drnacio@binpar.com',
+      username: 'DRNachio',
+      password: '1234',
+      email: 'drnachio@binpar.com',
       profile: {name: 'Ignacio Ferro Picón'}
     };
 
