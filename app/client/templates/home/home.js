@@ -1,6 +1,3 @@
-Template.home.rendered = function() {
-
-};
 Template.home.helpers({
 	listaDemo: function() {
 		return LogrosDemo.find({}, {sort: {Votos: -1}});

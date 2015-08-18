@@ -46,6 +46,11 @@ p {
 li {
   text-align: justify;
 }
+@media (max-width: @screen-xs-max) {
+  .hidden-small{
+    visibility: hidden;
+  }
+}
 
 @media (min-width: @screen-md-min) {
   .fixScrumHeight.fixScrumHeight
@@ -63,6 +68,8 @@ li {
     margin-bottom:-2px;
   }
 }
+
+
 
 .list-group-item .btn-group .btn-masmenos
 {
@@ -247,6 +254,9 @@ table.dataTable thead > tr > th
 .condensed-form .form-horizontal .form-group .list-group .btn{
   padding: 1px 4px;
 }
+.condensed-form .form-horizontal .form-group .list-group .btn .glyphicon-plus {
+  left:1.2px;
+}
 
 .condensed-form .form-control {
   height: 32px;
@@ -277,3 +287,8 @@ table.dataTable thead > tr > th
 {
   position: relative;
 }
+.pc-dimmer
+{
+  position: fixed;
+}
+

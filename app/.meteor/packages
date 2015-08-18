@@ -30,3 +30,5 @@ service-configuration
 aldeed:tabular
 ongoworks:security
 aldeed:delete-button
+matdutour:popup-confirm
+255kb:meteor-status

@@ -1,3 +1,4 @@
+255kb:meteor-status@1.4.0
 accounts-base@1.2.0
 accounts-password@1.1.1
 alanning:roles@1.2.13
@@ -49,6 +50,7 @@ livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
 matb33:collection-hooks@0.7.14
+matdutour:popup-confirm@0.1.25
 meteor@1.1.6
 meteor-platform@1.2.2
 minifiers@1.1.5
