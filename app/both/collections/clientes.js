@@ -17,7 +17,7 @@ DireccionSchema = new SimpleSchema({
 	},
 	ccpp: {
 		type: String,
-		regEx: /^[0-9]{5}$/,
+		regEx: SimpleSchema.RegEx.PostalCode,
 		label: "Código postal"
 	},
 	calle: {
@@ -126,6 +126,17 @@ Clientes.attachSchema(new SimpleSchema({
 		type: String,
 		label: "NIF",
 		min: 0,
+	},
+	fechaUltimoContacto:
+	{
+		type: Date,
+		label: "Fecha último contacto",
+		optional: true,
+		autoform: {
+			afFieldInput: {
+				type: "bootstrap-datetimepicker"
+			}
+		}
 	},
 	fechaCreacion: {
 		type: Date,
