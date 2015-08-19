@@ -1,0 +1,11 @@
+<template name="accessDenied">
+	<div class="not-found page jumbotron">
+		<h1>Error 403  <span id="avion" class="glyphicon glyphicon-send" aria-hidden="true"></span></h1>
+		<h2>No deberías estar aquí</h2>
+		<p>Lamentablemente, con el usuario actual no tienes permiso para hacer esto y por algún motivo que no alcanzo a comprender, te hemos dejado llegar.</p>
+		<p>Por eso, y gracias al inspirador ejemplo de la honorable Derek Zoolander School, hemos diseñado esta página de error para “páginas que no quieren hacer cosas que no pueden o no hacen otras cosas bien tambien”.</p>
+		<p class="text-right">
+				<a class="btn btn-primary btn-lg " href="{{ pathFor 'atSignIn' }}" role="button"><i class="fa fa-undo"></i> Acceder con credenciales</a>
+		</p>
+	</div>
+</template>

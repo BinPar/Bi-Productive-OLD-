@@ -31,3 +31,21 @@ Router.route('/dashboard', {
 Router.plugin('ensureSignedIn', {
   only: ['dashboard']
 });
+
+Router.onBeforeAction(function(){
+  if (!Meteor.user() || !Roles.userIsInRole(Meteor.user(), 'administración')) {
+    this.render('accessDenied');
+  }else {
+    this.next();
+  }},
+  {only: 'cliente.nuevo'}
+);
+
+Router.onBeforeAction(function(){
+    if (!Meteor.user() || !Roles.userIsInRole(Meteor.user(), ['administración','producción','comercial'])) {
+      this.render('accessDenied');
+    }else {
+      this.next();
+    }},
+  {only: ['clientes','cliente.detalles']}
+);

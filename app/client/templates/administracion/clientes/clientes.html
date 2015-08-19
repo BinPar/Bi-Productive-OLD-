@@ -2,8 +2,10 @@
 	<div class="page-header reduceTop">
 		<h2>
 			Listado de clientes
+			{{#if isInRole 'administración'}}
 			<a class="btn btn-primary pull-right hidden-small" href="{{pathFor route='cliente.nuevo'}}" title="Dar de alta nuevo cliente">+ Añadir</a>
-		</h2>
+			{{/if}}
+	</h2>
 	</div>
 	{{> tabular id="tabla" table=TabularTables.ListaClientes class="table table-striped display nowrap table-condensed binpar-resizeable"}}
 </template>
