@@ -1,1 +1,1 @@
-T9n.setLanguage("es_ES");
+T9n.setLanguage("es");

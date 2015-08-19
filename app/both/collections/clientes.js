@@ -133,9 +133,15 @@ Clientes.attachSchema(new SimpleSchema({
 		label: "Fecha último contacto",
 		optional: true,
 		autoform: {
+			type: "datetime-local"
+			/*
 			afFieldInput: {
-				type: "bootstrap-datetimepicker"
-			}
+				type: "bootstrap-datetimepicker",
+				dateTimePickerOptions: {
+					locale: 'es',
+					format:'DD/MM/YYYY hh:mm'
+				}
+			}*/
 		}
 	},
 	fechaCreacion: {
