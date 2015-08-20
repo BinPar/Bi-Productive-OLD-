@@ -1,6 +1,6 @@
 Meteor.startup(function() {
+  //Meteor.users.remove({});
   if(!Meteor.users.find().count()) {
-
     var info = {
       username: 'DRNachio',
       password: '1234',
