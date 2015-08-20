@@ -5,6 +5,13 @@ Template.home.helpers({
 });
 
 Template.home.events({
+	'click a': function (event) {
+		if(event.target.href && (event.target.href.indexOf("http://") || event.target.href.indexOf("https://"))) {
+			alert(event.target.href);
+	    event.preventDefault();
+	    window.open(event.target.href, '_blank');
+		}
+  },
 	'click .btnMas':  function (event){
 		Meteor.call('LogrosDemo.incValor',this._id);
 	},
