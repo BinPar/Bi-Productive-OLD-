@@ -14,7 +14,10 @@ Meteor.startup(function() {
 				{Name: 'DRNachio', Email: 'nacho@binpar.com'}
 			],
 			Description: '<p>Se incorpora la funcionalidad necesaria para matenimientos generales.</p>',
-			Details: '<p>Añadido módulo de DataTables <a href="https://atmospherejs.com/aldeed/tabular">aldeed:tabular</a>.</p>' +
+			Details: '<p>Algo de sufrimiento para configurar correctamente <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoformr</a>: Tengo la sensación de que <strong>Eric Dobbertin</strong> es un genio, pero la responsabilidad de mantener tantos paquetes simultáneamente le supera y es incompatible con el trabajo del que vive. Tal vez sea el primera debilidad clara del contexto de código abierto. Un sistema como este acelera mucho la velocidad en la que se crea el código, pero si nadie cobra por ello, es difícil exigir que funcione correctamente.</p>' +
+			'<p>El ejemplo más claro de esto serian los temas de validación de duplicados en servidor y como genera el efecto desagradable del error desapareciendo solo en el cliente (reconocido desde hace meses, pero sin fecha de solución) y el de un error de validación en un formulario que al salir del mismo (sin corregirlo) y volver a cualquier otro registro del mismo formulario sigue mostrando (aunque el registro este bien)… este último es especialmente llamativo y hace meses que se conoce.</p>' +
+			'<p>DataTables responsivas (una odisea).</p>' +
+			'<p>Añadido módulo de DataTables <a href="https://atmospherejs.com/aldeed/tabular">aldeed:tabular</a>.</p>' +
 			'<p>Localización de datatables mediante el fichero de configuración <strong>lib/config/traduccionDataTables.js</strong>.</p>' +
 			'<p>Añadido módulo de AutoForm <a href="https://atmospherejs.com/aldeed/autoform">aldeed:autoform</a>.</p>' +
 			'<p>Añadido módulo de Moment <a href="https://atmospherejs.com/momentjs/moment">momentjs:moment</a>.</p>' +
