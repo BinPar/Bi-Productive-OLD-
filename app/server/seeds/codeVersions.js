@@ -3,6 +3,7 @@ Meteor.startup(function() {
 	CodeVersions.remove({Version: '0.12'});
 	CodeVersions.remove({Version: '0.13'});
 
+
 	if (CodeVersions.find({Version: '0.13'}).count() === 0) {
 		CodeVersions.insert({
 			Version: '0.13',
@@ -25,7 +26,6 @@ Meteor.startup(function() {
 			'<p>Incorporado sistema de animación a la home en la lista de <strong>los logros más valorados<strong> al reordenar.'
 		});
 	}
-
 
 	if (CodeVersions.find({Version: '0.12'}).count() === 0) {
 		CodeVersions.insert({
