@@ -41,7 +41,6 @@ Meteor.startup(function() {
 		});
 	}
 
-
 	if (CodeVersions.find({Version: '0.12'}).count() === 0) {
 		CodeVersions.insert({
 			Version: '0.12',
