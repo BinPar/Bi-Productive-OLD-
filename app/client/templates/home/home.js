@@ -8,7 +8,6 @@ Template.home.events({
 	'click a': function (event) {
 		if(event.target.href && event.target.href.indexOf("http://localhost") !=0 && event.target.href.toLower().indexOf("bi-productive") !=0 && (event.target.href.indexOf("http://") || event.target.href.indexOf("https://"))) {
 			event.preventDefault();
-		
 	    window.open(event.target.href, '_blank');
 		}
   },
@@ -39,7 +38,6 @@ Template.home.onRendered(function () {
 			list.children().each(function(){
 				if($(this).data("lastPos") != list.children().index(this) && this != node) inBetween.push(this);
 			});
-
 
 			var newTop = $node.offset().top;
 

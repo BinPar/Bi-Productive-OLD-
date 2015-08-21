@@ -34,7 +34,11 @@ Router.plugin('ensureSignedIn', {
 
 Router.onBeforeAction(function(){
   if (!Meteor.user() || !Roles.userIsInRole(Meteor.user(), 'administración')) {
-    this.render('accessDenied');
+    if (Meteor.loggingIn()) {
+      this.render(this.loadingTemplate);
+    } else {
+      this.render('accessDenied');
+    }
   }else {
     this.next();
   }},
@@ -43,7 +47,11 @@ Router.onBeforeAction(function(){
 
 Router.onBeforeAction(function(){
     if (!Meteor.user() || !Roles.userIsInRole(Meteor.user(), ['administración','producción','comercial'])) {
-      this.render('accessDenied');
+      if (Meteor.loggingIn()) {
+        this.render(this.loadingTemplate);
+      } else {
+        this.render('accessDenied');
+      }
     }else {
       this.next();
     }},
