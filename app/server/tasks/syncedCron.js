@@ -2,14 +2,13 @@
  * Created by IgnacioFerro on 07/09/2015.
  */
 SyncedCron.add({
-	name: 'Crunch some important numbers for the marketing department',
+	name: 'Verificar el estado de las páginas web',
 	schedule: function(parser) {
 		// parser is a later.parse object
-		return parser.text('every 2 hours');
+		return parser.text('every 2 minutes');
 	},
 	job: function() {
-		console.log("Job Call");
-		return null;
+		return "Evento invocado";
 	}
 });
 
